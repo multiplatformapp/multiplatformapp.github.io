@@ -1,0 +1,11 @@
+I"(<h2 id="background">Background</h2>
+<p>Setting up blog using Github pages and Jekyll</p>
+
+<h2 id="installation">Installation:</h2>
+<ul>
+  <li>Pick a Jekyll theme from :  <a href="https://jekyllthemes.io/">https://jekyllthemes.io/</a></li>
+  <li>Fork the repo:  <a href="https://github.com/StartBootstrap/startbootstrap-clean-blog">https://github.com/StartBootstrap/startbootstrap-clean-blog</a></li>
+  <li>Change the name of the forked repo to <code class="language-plaintext highlighter-rouge">yourgithubhandle.github.io</code></li>
+  <li></li>
+</ul>
+:ET
