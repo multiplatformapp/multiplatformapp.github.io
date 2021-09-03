@@ -1,0 +1,64 @@
+I";<h2 id="background">Background</h2>
+<p>Setting up blog using Github pages and Jekyll</p>
+
+<h2 id="installation">Installation:</h2>
+<ul>
+  <li>Pick a Jekyll theme from :  <a href="https://jekyllthemes.io/">https://jekyllthemes.io/</a></li>
+  <li>Fork the repo:  <a href="https://github.com/StartBootstrap/startbootstrap-clean-blog">https://github.com/StartBootstrap/startbootstrap-clean-blog</a></li>
+  <li>Change the name of the forked repo to <code class="language-plaintext highlighter-rouge">yourgithubhandle.github.io</code></li>
+  <li>Pull repo down to run locally (ref: <a href="https://jekyllrb.com/">https://jekyllrb.com/</a>)
+    <ul>
+      <li>Install Jekyll on local machine: <code class="language-plaintext highlighter-rouge">gem install jekyll bundler</code></li>
+      <li>From the cloned github repo, run:  <code class="language-plaintext highlighter-rouge">bundle install</code> to restore project</li>
+      <li>Start jekyll server: <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code></li>
+    </ul>
+  </li>
+  <li>Clean up:
+    <ul>
+      <li>Update <code class="language-plaintext highlighter-rouge">_config.yml</code> file with your details and delete unrelated content.</li>
+      <li>Delete all default post from <code class="language-plaintext highlighter-rouge">_posts.</code> folder.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="write-post">Write Post</h2>
+<ul>
+  <li>From <code class="language-plaintext highlighter-rouge">_posts/</code> folder, add mardown file following <code class="language-plaintext highlighter-rouge">year/month/date/post-title</code> convention</li>
+  <li>Add the following details to top of the markdown file:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: post
+title: "Setup Github pages with Jekyll"
+subtitle: "because they are awesome"
+date: '2021-08-22 17:06:15'
+background: '/img/bg-about.jpg'
+---
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="custom-syntax-highlighting-with-css-file">Custom syntax highlighting with css file.</h2>
+<p>Make sure <code class="language-plaintext highlighter-rouge">kramdown</code> and <code class="language-plaintext highlighter-rouge">rouge</code> are installed</p>
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>kramdown rouge
+</code></pre></div></div>
+<p>Add these to <code class="language-plaintext highlighter-rouge">_config.yml</code> file</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">markdown</span><span class="pi">:</span> <span class="s">kramdown</span>
+<span class="na">highlighter</span><span class="pi">:</span> <span class="s">rouge</span>
+</code></pre></div></div>
+
+<p>Download a <code class="language-plaintext highlighter-rouge">css</code> stylesheet that you like.</p>
+
+<p>I’m using <a href="https://gist.github.com/DarkSector/49e4e0e5e962c5342432">monokai.css</a></p>
+
+<p>Add <code class="language-plaintext highlighter-rouge">monokai.css</code> file to <code class="language-plaintext highlighter-rouge">assets</code> folder (the assets folder on same level woth _posts folder)</p>
+
+<p>Run this command to copy <code class="language-plaintext highlighter-rouge">monokai.css</code> to <code class="language-plaintext highlighter-rouge">_site\assets\</code> folder</p>
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rougify style monokai <span class="o">&gt;</span> assets/monokai.css
+</code></pre></div></div>
+
+<p>Open <code class="language-plaintext highlighter-rouge">head.html</code> and add link to <code class="language-plaintext highlighter-rouge">monokai.css</code> right below <code class="language-plaintext highlighter-rouge">main.css</code></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/assets/main.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/assets/monokai.css"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p>That’s it.</p>
+:ET

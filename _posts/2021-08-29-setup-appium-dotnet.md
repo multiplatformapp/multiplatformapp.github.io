@@ -62,7 +62,7 @@ dotnet add package NUnit3TestAdapter --version 4.0.0
 ```
 
 Alternative paste these in `.csproj` file, then run `dotnet restore`
-```C#
+```csharp
   <ItemGroup>
     <PackageReference Include="Appium.WebDriver" Version="4.3.1" />
     <PackageReference Include="NUnit" Version="3.13.2" />
@@ -72,7 +72,7 @@ Alternative paste these in `.csproj` file, then run `dotnet restore`
 
 ## Create first android test:
 Create `FirstAndroidTest.cs`
-```C#
+```csharp
 using System;
 using System.IO;
 using NUnit.Framework;
@@ -149,7 +149,7 @@ The test app launch and our test run.
 
 ## Create iOS first test
 Create `FirstIOSTest.cs`
-```C#
+```csharp
 using System;
 using System.IO;
 using NUnit.Framework;

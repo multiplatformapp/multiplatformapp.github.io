@@ -34,3 +34,35 @@ date: '2021-08-22 17:06:15'
 background: '/img/bg-about.jpg'
 ---
 ```
+
+
+## Custom syntax highlighting with css file.
+Make sure `kramdown` and `rouge` are installed
+```zsh
+gem install kramdown rouge
+```
+Add these to `_config.yml` file 
+```yml
+markdown: kramdown
+highlighter: rouge
+```
+
+
+Download a `css` stylesheet that you like.  
+
+I'm using [monokai.css](https://gist.github.com/DarkSector/49e4e0e5e962c5342432)
+
+Add `monokai.css` file to `assets` folder (the assets folder on same level woth _posts folder)
+
+Run this command to copy `monokai.css` to `_site\assets\` folder
+```zsh
+rougify style monokai > assets/monokai.css
+```
+
+Open `head.html` and add link to `monokai.css` right below `main.css`
+```html
+<link rel="stylesheet" href="{{"/assets/main.css" | relative_url }}">
+<link rel="stylesheet" href="{{"/assets/monokai.css" | relative_url }}">
+```
+
+That's it.
