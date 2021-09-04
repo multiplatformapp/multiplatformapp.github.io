@@ -1,1 +1,0 @@
-Sitemap: https://multiplatformapp.github.io/sitemap.xml
