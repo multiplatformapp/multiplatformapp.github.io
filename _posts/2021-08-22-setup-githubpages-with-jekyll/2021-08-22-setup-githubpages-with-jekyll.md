@@ -6,7 +6,10 @@ date: '2021-08-22 17:06:15'
 background: '/img/bg-about.jpg'
 ---
 
+(Updated 2021-09-04)
+
 ## Background
+
 Setting up blog using Github pages and Jekyll
 
 <br/>
@@ -79,6 +82,20 @@ Code indentation might be display as 8 spaces. Example:
 
 To fix this, use VSCode and `Convert Indentation to Spaces`
 
-![image-20210904075416408](./img/SpacesBtn.png)
+<img src="./img/SpacesBtn.png" alt="image-20210904075416408" style="zoom: 50%;" />
 
-![image-20210904075508532](./img/indentationToSpaces.png)
+<img src="./img/indentationToSpaces.png" alt="image-20210904075508532" style="zoom: 50%;" />
+
+<br/>
+
+## Reference Images in Markdown Compliant manner
+
+To achieve this install `jekyll-postfiles`. Add this to `Gemfile`, then run `bundle install`
+
+```bash
+group :jekyll_plugins do
+  gem 'jekyll-postfiles'
+end
+```
+
+And that's it, images in same folder as Markdown files under `_posts` folder will automatically be copied to `_site/yourpost` folder
