@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    Setup Github pages with Jekyll - Multiplatform App
+    
+  </title>
+
+  <meta name="description" content="(Updated 2021-09-04)">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/monokai.css">
+  <link rel="canonical" href="https://multiplatformapp.github.io/2021/08/22/setup-githubpages-with-jekyll.html">
+  <link rel="alternate" type="application/rss+xml" title="Multiplatform App" href="/feed.xml">
+
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">Multiplatform App</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+<header class="masthead" style="background-image: url('/img/bg-about.jpg')">
+  
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Setup Github pages with Jekyll</h1>
+            
+            <h2 class="subheading">because they are awesome</h2>
+            
+            <span class="meta">Posted by
+              <a href="#">Multiplatform App</a>
+              on August 22, 2021 &middot; <span class="reading-time" title="Estimated read time">
+  
+   3 mins  read </span>
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <p>(Updated 2021-09-04)</p>
+
+<h2 id="background">Background</h2>
+
+<p>Setting up blog using Github pages and Jekyll</p>
+
+<p><br /></p>
+
+<h2 id="installation">Installation:</h2>
+<ul>
+  <li>Pick a Jekyll theme from :  <a href="https://jekyllthemes.io/">https://jekyllthemes.io/</a></li>
+  <li>Fork the repo:  <a href="https://github.com/StartBootstrap/startbootstrap-clean-blog">https://github.com/StartBootstrap/startbootstrap-clean-blog</a></li>
+  <li>Change the name of the forked repo to <code class="language-plaintext highlighter-rouge">yourgithubhandle.github.io</code></li>
+  <li>Pull repo down to run locally (ref: <a href="https://jekyllrb.com/">https://jekyllrb.com/</a>)
+    <ul>
+      <li>Install Jekyll on local machine: <code class="language-plaintext highlighter-rouge">gem install jekyll bundler</code></li>
+      <li>From the cloned github repo, run:  <code class="language-plaintext highlighter-rouge">bundle install</code> to restore project</li>
+      <li>Start jekyll server: <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code></li>
+    </ul>
+  </li>
+  <li>Clean up:
+    <ul>
+      <li>Update <code class="language-plaintext highlighter-rouge">_config.yml</code> file with your details and delete unrelated content.</li>
+      <li>Delete all default post from <code class="language-plaintext highlighter-rouge">_posts.</code> folder.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="write-post">Write Post</h2>
+<ul>
+  <li>From <code class="language-plaintext highlighter-rouge">_posts/</code> folder, add mardown file following <code class="language-plaintext highlighter-rouge">year/month/date/post-title</code> convention</li>
+  <li>Add the following details to top of the markdown file:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: post
+title: "Setup Github pages with Jekyll"
+subtitle: "because they are awesome"
+date: '2021-08-22 17:06:15'
+background: '/img/bg-about.jpg'
+---
+</code></pre></div>    </div>
+    <p><br /></p>
+  </li>
+</ul>
+
+<h2 id="custom-syntax-highlighting-with-css-file">Custom syntax highlighting with css file.</h2>
+<p>Make sure <code class="language-plaintext highlighter-rouge">kramdown</code> and <code class="language-plaintext highlighter-rouge">rouge</code> are installed</p>
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>kramdown rouge
+</code></pre></div></div>
+<p>Add these to <code class="language-plaintext highlighter-rouge">_config.yml</code> file</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">markdown</span><span class="pi">:</span> <span class="s">kramdown</span>
+<span class="na">highlighter</span><span class="pi">:</span> <span class="s">rouge</span>
+</code></pre></div></div>
+
+<p>Download a <code class="language-plaintext highlighter-rouge">css</code> stylesheet that you like.</p>
+
+<p>I’m using <a href="https://gist.github.com/DarkSector/49e4e0e5e962c5342432">monokai.css</a></p>
+
+<p>Add <code class="language-plaintext highlighter-rouge">monokai.css</code> file to <code class="language-plaintext highlighter-rouge">assets</code> folder (the assets folder on same level woth _posts folder)</p>
+
+<p>Run this command to copy <code class="language-plaintext highlighter-rouge">monokai.css</code> to <code class="language-plaintext highlighter-rouge">_site\assets\</code> folder</p>
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rougify style monokai <span class="o">&gt;</span> assets/monokai.css
+</code></pre></div></div>
+
+<p>Open <code class="language-plaintext highlighter-rouge">head.html</code> and add link to <code class="language-plaintext highlighter-rouge">monokai.css</code> right below <code class="language-plaintext highlighter-rouge">main.css</code></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/assets/main.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/assets/monokai.css"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="fix-code-highlighting-indentation">Fix code highlighting indentation</h2>
+<p>Code indentation might be display as 8 spaces. Example:</p>
+
+<p><img src="./img/8spacesExample.png" alt="8spacesExample" style="zoom:80%;" /></p>
+
+<p>To fix this, use VSCode and <code class="language-plaintext highlighter-rouge">Convert Indentation to Spaces</code></p>
+
+<p><img src="./img/SpacesBtn.png" alt="image-20210904075416408" style="zoom: 50%;" /></p>
+
+<p><img src="./img/indentationToSpaces.png" alt="image-20210904075508532" style="zoom: 50%;" /></p>
+
+<p><br /></p>
+
+<h2 id="reference-images-in-markdown-compliant-manner">Reference Images in Markdown Compliant manner</h2>
+
+<p>To achieve this install <code class="language-plaintext highlighter-rouge">jekyll-postfiles</code>. Add this to <code class="language-plaintext highlighter-rouge">Gemfile</code>, then run <code class="language-plaintext highlighter-rouge">bundle install</code></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>group :jekyll_plugins <span class="k">do
+  </span>gem <span class="s1">'jekyll-postfiles'</span>
+end
+</code></pre></div></div>
+
+<p>And that’s it, images in same folder as Markdown files under <code class="language-plaintext highlighter-rouge">_posts</code> folder will automatically be copied to <code class="language-plaintext highlighter-rouge">_site/yourpost</code> folder</p>
+
+
+        <hr>
+
+        <div class="clearfix">
+
+          
+          
+          <a class="btn btn-primary float-right" href="/2021/08/22/setup-appium-dotnet.html" data-toggle="tooltip" data-placement="top" title="Mobile Automation with Appium in .NET - Setup and writing first test">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:multiplatformappdotcom@gmail.com">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Multiplatform App 2021</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/scripts.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WMRVHT6R62"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WMRVHT6R62');
+</script>
+
+
+
+</body>
+
+</html>
