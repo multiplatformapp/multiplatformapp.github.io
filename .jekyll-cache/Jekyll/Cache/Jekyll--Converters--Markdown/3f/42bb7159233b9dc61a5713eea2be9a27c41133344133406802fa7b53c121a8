@@ -1,0 +1,3 @@
+I"�<p>When setup driver options for Android, we need to specify app activity.
+          driverOptions.AddAdditionalCapability(“appWaitActivity”, “*.MainActivity”); //(4)</p>
+:ET

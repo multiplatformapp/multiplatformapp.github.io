@@ -2,7 +2,7 @@
 layout: post
 title: "Mobile Automation with Appium in .NET - Setup and writing first test"
 subtitle: "Setup Appium and writing first test for iOS & Android"
-date: '2021-08-22 17:06:15'
+date: '2021-08-29 17:06:15'
 background: '/img/bg-about.jpg'
 ---
 

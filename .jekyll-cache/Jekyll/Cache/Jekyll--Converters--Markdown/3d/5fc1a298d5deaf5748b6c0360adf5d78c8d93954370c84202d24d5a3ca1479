@@ -1,0 +1,13 @@
+I"u<p>When setup driver options for Android, we need to specify app activity. Something like this:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">_driverOptions</span><span class="p">.</span><span class="nf">AddAdditionalCapability</span><span class="p">(</span><span class="s">"appActivity"</span><span class="p">,</span> <span class="s">"*.MainActivity"</span><span class="p">);</span>
+</code></pre></div></div>
+<p>Or if app has a <code class="language-plaintext highlighter-rouge">SplashActivity</code> then we need to wait for the <code class="language-plaintext highlighter-rouge">MainActivity</code></p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">_driverOptions</span><span class="p">.</span><span class="nf">AddAdditionalCapability</span><span class="p">(</span><span class="s">"appWaitActivity"</span><span class="p">,</span> <span class="s">"*.MainActivity"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>It is quite common for app main activity to be <code class="language-plaintext highlighter-rouge">com.example.app.mainActivity</code>. However, this is not always the case. Sometimes, main activity can be named differently.</p>
+
+<p>One example of this is apps that built using xamarin, by defaut, if no activity name are</p>
+:ET
